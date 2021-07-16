@@ -1,0 +1,523 @@
+@import "variables";
+@import "fuentes";
+@import "each";
+
+/* Estilos generales */
+
+body {
+	background-color: #e8e8e8;
+	font-family: $font-family;
+}
+
+@keyframes aparecer {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.copyright {
+    p {
+        animation-delay: 0;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: aparecer;
+    }
+}
+
+.enlaceTexto {
+	color: #af1313;
+	text-decoration: none;
+	font-style: italic;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+footer {
+	background: rgb(122,121,128);
+	background: linear-gradient(90deg, rgba(122,121,128,1) 0%, rgba(219,213,213,1) 50%, rgba(128,123,123,1) 100%);
+	min-height: 3vh;
+}
+
+h1 {
+	font-weight: 400;
+	text-decoration: none;
+}
+
+header {
+	background-color: #f4f4f2;
+}
+
+.menuInferior {
+    a {
+        color: #000;
+        font-size: 1.1rem;
+        text-decoration: none;
+            svg {
+                text-decoration: none;
+            }
+    }   
+}
+
+.menuSuperior {
+    a {
+        color: #000;
+        font-size: 1.5em;
+        text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+    }
+}
+
+.redesSociales {
+    img {
+        width: 25px;
+		&:hover {
+			transform: scale(1.1);
+			transition: all 75ms;
+		}
+    }
+}
+
+.textoPrincipal {
+	color: #000;
+	font-size: 0.8em;
+	line-height: 2em;
+	letter-spacing: 0em;
+	word-spacing: 0em;
+}
+
+.titulo {
+	font-size: 0.9em;
+	text-decoration: underline;
+}
+
+.tituloImportante {
+	color: $colorTitulo;
+	font-size: 1.25rem;
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 576px) {
+
+	.menuSuperior {
+		min-height: 10vh;
+        a {
+            font-size: 1.125em;
+        }
+	}
+
+	.redesSociales {
+        img {
+            width: 30px;
+        }
+    }
+
+	.textoPrincipal {
+		font-size: 1em;
+        } 
+
+	.titulo {
+		font-size: 1.125em;
+        }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	.redesSociales {
+        img {
+            width: 35px;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+
+	.menuSuperior {
+		min-height: 10vh;
+        a {
+            font-size: 1.5em;
+			&:hover {
+				transform: scale(0.9);
+				transition: all 500ms;
+				text-decoration: underline;
+			}
+        }
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .menuSuperior {
+        a {
+            font-size: 1.625em;
+        }
+    }
+}
+
+
+/* Estilos específicos de index.html */
+
+.carruselIndex {
+	max-width: 350px;
+}
+
+.contenidoIndex {
+    img {
+        height: 140px;
+    }
+}
+
+#footerIndex {
+	border-top: #af1313 3px solid;
+}
+
+#headerIndex {
+	border-bottom: #af1313 3px solid;
+}
+
+#portadaIndex {
+	background-image: url('../media/portada01.JPG');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+}
+
+/* Media queries específicos del index */
+
+@media only screen and (min-width: 576px) {
+
+	.carruselIndex {
+		max-width: 550px;
+	}
+
+	.contenidoIndex {
+        img {
+            height: 275px;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	.carruselIndex {
+		max-width: 700px;
+	}
+
+	.contenidoIndex {
+        img {
+            height: 350px;
+        }
+    }
+
+	#portadaIndex {
+		height: 35vh;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	.carruselIndex {
+		max-width: 900px;
+	}
+
+	.contenidoIndex {
+        img {
+            height: 500px;
+        }
+    }
+
+	#portadaIndex {
+		height: 40vh;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.contenidoIndex {
+        img {
+            height: 325px;
+        }
+    }
+
+	#portadaIndex {
+		height: 50vh;
+	}
+
+}
+
+/* Estilos específicos de cuentos_escritos.html */
+
+.carruselCuentosEscritos {
+	max-width: 325px;
+}
+
+#footerCuentosEscritos {
+	border-top: #b5c700 3px solid;
+}
+
+#headerCuentosEscritos {
+	border-bottom: #b5c700 3px solid;
+}
+
+#portadaCuentosEscritos {
+	background-image: url('../media/portada02.JPG');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+}
+
+
+/* Media queries específicos de cuentos_escritos */
+
+
+@media only screen and (min-width: 576px) {
+
+	.carruselCuentosEscritos {
+		max-width: 550px;
+	}
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	.carruselCuentosEscritos {
+		max-width: 650px;
+	}
+
+	#portadaCuentosEscritos {
+		height: 35vh;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	.carruselCuentosEscritos {
+		max-width: 900px;
+	}
+
+	#portadaCuentosEscritos {
+		height: 40vh;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.imagenesCuentosEscritosUno {
+        img {
+            width: 30vw;
+			&:hover {
+				transform: scale(1.01);
+				transition: all 100ms;
+			}
+        }
+    }
+
+    .imagenesCuentosEscritosDos {
+        img {
+            width: 30vw;
+			&:hover {
+				transform: scale(1.01);
+				transition: all 100ms;
+			}
+        }
+    }
+
+	#portadaCuentosEscritos {
+		height: 50vh;
+	}
+
+}
+
+/* Estilos específicos de audiocuentos.html */
+
+#archivosAudiocuentos {
+    .titulo {
+        padding-top: 15px;
+    }
+}
+
+.bloqueAcordeon {
+	background-color: #e8e8e8;
+}
+
+#footerAudiocuentos {
+	border-top: #d23200 3px solid;
+}
+
+#headerAudiocuentos {
+	border-bottom: #d23200 3px solid;
+}
+
+#portadaAudiocuentos {
+	background-image: url('../media/portada03.JPG');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+}
+
+/* Media queries específicos de audiocuentos */
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	#portadaAudiocuentos {
+		height: 35vh;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	#portadaAudiocuentos {
+		height: 40vh;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	#portadaAudiocuentos {
+		height: 50vh;
+	}
+
+}
+
+/* Estilos específicos de sobre_mi.html */
+
+#footerSobreMi {
+	border-top: #112d4e 3px solid;
+}
+
+#headerSobreMi {
+	border-bottom: #112d4e 3px solid;
+}
+
+#imagenSobreMi {
+    img {
+        max-width: 300px;
+        width: 60vw;
+    }
+}
+
+#portadaSobreMi {
+	background-image: url('../media/portada04.JPG');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+}
+
+/* Media queries específicos de sobre mí */
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	#portadaSobreMi {
+		height: 35vh;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	#portadaSobreMi {
+		height: 40vh;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	#imagenInfoPersonal {
+        img {
+            max-width: 350px;
+        }
+    }
+
+	#portadaSobreMi {
+		height: 50vh;
+	}
+
+}
+
+
+/* Estilos específicos de contacto.html */
+
+#contenedorContacto {
+    .redesSociales {
+        a {
+            img {
+                width: 30px;
+            }
+        }
+    }
+}
+
+#footerContacto {
+	border-top: #b084fd 3px solid;
+}
+
+#headerContacto {
+	border-bottom: #b084fd 3px solid;
+}
+
+#portadaContacto {
+	background-image: url('../media/portada05.JPG');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 30vh;
+}
+
+/* Media queries específicos de contacto */
+
+
+@media only screen and (min-width: 576px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+
+	#portadaContacto {
+		height: 35vh;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+
+	#portadaContacto {
+		height: 40vh;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+	#portadaContacto {
+		height: 50vh;
+	}
+
+}
