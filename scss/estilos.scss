@@ -270,13 +270,8 @@ header {
 
 /* Estilos específicos de cuentos_escritos.html */
 
-#acordeonCuentos {
-	div {
-		article {
-			border: #af1313 3px solid;
-		}
-	}
-
+.card {
+	border: none;
 }
 
 .carruselCuentosEscritos {
@@ -404,7 +399,7 @@ header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30vh;
+	height: 25vh;
 }
 
 
