@@ -69,7 +69,7 @@ header {
 
 .menuSuperior {
     a {
-        font-size: 1.5em;
+        font-size: 1.4em;
         text-decoration: none;
 		&:hover {
 			text-decoration: underline;
@@ -93,21 +93,14 @@ header {
 
 .textoPrincipal {
 	color: #000;
-	font-size: 0.8em;
+	font-size: 1.125em;
 	line-height: 2em;
-	letter-spacing: 0em;
 	margin-bottom: 0.5rem;
-	word-spacing: 0em;
-}
-
-.titulo {
-	font-size: 0.9em;
-	text-decoration: underline;
 }
 
 .tituloImportante {
 	color: $colorTitulo;
-	font-size: 1.25rem;
+	font-size: 1.25em;
 	text-decoration: underline;
 }
 
@@ -116,7 +109,7 @@ header {
 	.menuSuperior {
 		min-height: 5vh;
         a {
-            font-size: 1.125em;
+            font-size: 1.1em;
         }
 	}
 
@@ -127,22 +120,28 @@ header {
     }
 
 	.textoPrincipal {
-		font-size: 1em;
-        } 
-
-	.titulo {
 		font-size: 1.125em;
-        }
+        } 
 
 }
 
 @media only screen and (min-width: 768px) {
+
+	.menuSuperior {
+        a {
+            font-size: 1.25em;
+        }
+	}
 
 	.redesSociales {
         img {
             width: 35px;
         }
     }
+
+	.textoPrincipal {
+		font-size: 1.125em;
+        }
 }
 
 
@@ -159,6 +158,10 @@ header {
 			}
         }
 	}
+
+	.textoPrincipal {
+		font-size: 1em;
+        }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -464,9 +467,18 @@ header {
 	height: 30vh;
 }
 
+.titulo {
+	font-size: 1em;
+	text-decoration: underline;
+}
+
 /* Media queries específicos de audiocuentos */
 
 @media only screen and (min-width: 576px) {
+
+	.titulo {
+		font-size: 1.125em;
+        }
 
 }
 
