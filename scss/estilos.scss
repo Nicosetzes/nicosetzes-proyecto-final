@@ -35,7 +35,7 @@ body {
 footer {
 	background: rgb(122,121,128);
 	background: linear-gradient(90deg, rgba(122,121,128,1) 0%, rgba(219,213,213,1) 50%, rgba(128,123,123,1) 100%);
-	min-height: 3vh;
+	min-height: 10vh;
 }
 
 h1 {
@@ -269,14 +269,6 @@ header {
 }
 
 /* Estilos específicos de cuentos_escritos.html */
-
-.card {
-	border: none;
-}
-
-.carruselCuentosEscritos {
-	max-width: 325px;
-}
 
 .cuentoEscritoSm {
 	padding: 1rem;
