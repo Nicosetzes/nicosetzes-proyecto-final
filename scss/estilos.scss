@@ -201,11 +201,11 @@ header {
 }
 
 #portadaIndex {
-	background-image: url('../media/portada01.jpg');
+	background-image: url('../media/header01.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30vh;
+	height: 25vh;
 }
 
 /* Media queries específicos del index */
@@ -235,7 +235,7 @@ header {
     }
 
 	#portadaIndex {
-		height: 35vh;
+		height: 30vh;
 	}
 
 }
@@ -252,7 +252,7 @@ header {
     }
 
 	#portadaIndex {
-		height: 40vh;
+		height: 30vh;
 	}
 
 }
@@ -267,7 +267,7 @@ header {
     }
 
 	#portadaIndex {
-		height: 50vh;
+		height: 35vh;
 	}
 
 }
@@ -392,7 +392,7 @@ header {
 }
 
 #portadaCuentosEscritos {
-	background-image: url('../media/portada02.jpg');
+	background-image: url('../media/header02.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -414,8 +414,6 @@ header {
 			position: relative;
 			&:hover .tarjetaImagen {
 				opacity: 0.3;
-				transform: scale(1.025);
-				transition: transform ease-out 200ms;
 			}
 			&:hover .tarjetaTexto {
 				opacity: 1;
@@ -531,11 +529,11 @@ header {
 }
 
 #portadaAudiocuentos {
-	background-image: url('../media/portada03.jpg');
+	background-image: url('../media/header03.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30vh;
+	height: 25vh;
 }
 
 .titulo {
@@ -556,7 +554,7 @@ header {
 @media only screen and (min-width: 768px) {
 
 	#portadaAudiocuentos {
-		height: 35vh;
+		height: 30vh;
 	}
 
 }
@@ -564,7 +562,7 @@ header {
 @media only screen and (min-width: 992px) {
 
 	#portadaAudiocuentos {
-		height: 40vh;
+		height: 30vh;
 	}
 
 }
@@ -572,7 +570,7 @@ header {
 @media only screen and (min-width: 1200px) {
 
 	#portadaAudiocuentos {
-		height: 50vh;
+		height: 35vh;
 	}
 
 }
@@ -595,11 +593,11 @@ header {
 }
 
 #portadaSobreMi {
-	background-image: url('../media/portada04.jpg');
+	background-image: url('../media/header04.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30vh;
+	height: 25vh;
 }
 
 /* Media queries específicos de sobre mí */
@@ -611,7 +609,7 @@ header {
 @media only screen and (min-width: 768px) {
 
 	#portadaSobreMi {
-		height: 35vh;
+		height: 30vh;
 	}
 
 }
@@ -619,7 +617,7 @@ header {
 @media only screen and (min-width: 992px) {
 
 	#portadaSobreMi {
-		height: 40vh;
+		height: 30vh;
 	}
 
 }
@@ -633,7 +631,7 @@ header {
     }
 
 	#portadaSobreMi {
-		height: 50vh;
+		height: 35vh;
 	}
 
 }
@@ -660,11 +658,11 @@ header {
 }
 
 #portadaContacto {
-	background-image: url('../media/portada05.jpg');
+	background-image: url('../media/header05.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 30vh;
+	height: 25vh;
 }
 
 /* Media queries específicos de contacto */
@@ -677,7 +675,7 @@ header {
 @media only screen and (min-width: 768px) {
 
 	#portadaContacto {
-		height: 35vh;
+		height: 30vh;
 	}
 
 }
@@ -685,7 +683,7 @@ header {
 @media only screen and (min-width: 992px) {
 
 	#portadaContacto {
-		height: 40vh;
+		height: 30vh;
 	}
 
 }
@@ -693,7 +691,7 @@ header {
 @media only screen and (min-width: 1200px) {
 
 	#portadaContacto {
-		height: 50vh;
+		height: 35vh;
 	}
 
 }

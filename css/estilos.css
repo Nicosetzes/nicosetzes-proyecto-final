@@ -213,11 +213,11 @@ header .menuSuperior a:hover {
 }
 
 #portadaIndex {
-  background-image: url("../media/portada01.jpg");
+  background-image: url("../media/header01.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 25vh;
 }
 
 /* Media queries específicos del index */
@@ -238,7 +238,7 @@ header .menuSuperior a:hover {
     max-width: 700px;
   }
   #portadaIndex {
-    height: 35vh;
+    height: 30vh;
   }
 }
 
@@ -250,7 +250,7 @@ header .menuSuperior a:hover {
     max-width: 900px;
   }
   #portadaIndex {
-    height: 40vh;
+    height: 30vh;
   }
 }
 
@@ -259,7 +259,7 @@ header .menuSuperior a:hover {
     max-height: 325px;
   }
   #portadaIndex {
-    height: 50vh;
+    height: 35vh;
   }
 }
 
@@ -384,7 +384,7 @@ header .menuSuperior a:hover {
 }
 
 #portadaCuentosEscritos {
-  background-image: url("../media/portada02.jpg");
+  background-image: url("../media/header02.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -409,12 +409,6 @@ header .menuSuperior a:hover {
 
 .textoAside aside .tarjeta:hover .tarjetaImagen {
   opacity: 0.3;
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
-  -webkit-transition: -webkit-transform ease-out 200ms;
-  transition: -webkit-transform ease-out 200ms;
-  transition: transform ease-out 200ms;
-  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
 }
 
 .textoAside aside .tarjeta:hover .tarjetaTexto {
@@ -533,11 +527,11 @@ header .menuSuperior a:hover {
 }
 
 #portadaAudiocuentos {
-  background-image: url("../media/portada03.jpg");
+  background-image: url("../media/header03.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 25vh;
 }
 
 .titulo {
@@ -554,19 +548,19 @@ header .menuSuperior a:hover {
 
 @media only screen and (min-width: 768px) {
   #portadaAudiocuentos {
-    height: 35vh;
+    height: 30vh;
   }
 }
 
 @media only screen and (min-width: 992px) {
   #portadaAudiocuentos {
-    height: 40vh;
+    height: 30vh;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   #portadaAudiocuentos {
-    height: 50vh;
+    height: 35vh;
   }
 }
 
@@ -585,23 +579,23 @@ header .menuSuperior a:hover {
 }
 
 #portadaSobreMi {
-  background-image: url("../media/portada04.jpg");
+  background-image: url("../media/header04.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 25vh;
 }
 
 /* Media queries específicos de sobre mí */
 @media only screen and (min-width: 768px) {
   #portadaSobreMi {
-    height: 35vh;
+    height: 30vh;
   }
 }
 
 @media only screen and (min-width: 992px) {
   #portadaSobreMi {
-    height: 40vh;
+    height: 30vh;
   }
 }
 
@@ -610,7 +604,7 @@ header .menuSuperior a:hover {
     max-width: 350px;
   }
   #portadaSobreMi {
-    height: 50vh;
+    height: 35vh;
   }
 }
 
@@ -628,29 +622,29 @@ header .menuSuperior a:hover {
 }
 
 #portadaContacto {
-  background-image: url("../media/portada05.jpg");
+  background-image: url("../media/header05.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30vh;
+  height: 25vh;
 }
 
 /* Media queries específicos de contacto */
 @media only screen and (min-width: 768px) {
   #portadaContacto {
-    height: 35vh;
+    height: 30vh;
   }
 }
 
 @media only screen and (min-width: 992px) {
   #portadaContacto {
-    height: 40vh;
+    height: 30vh;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   #portadaContacto {
-    height: 50vh;
+    height: 35vh;
   }
 }
 /*# sourceMappingURL=estilos.css.map */
