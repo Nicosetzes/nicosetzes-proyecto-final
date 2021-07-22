@@ -198,7 +198,7 @@ header .menuSuperior a:hover {
 
 .contenidoIndex .fotoIndex img {
   border-radius: 10px;
-  height: 225px;
+  max-height: 150px;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform ease-in-out 300ms;
@@ -250,7 +250,7 @@ header .menuSuperior a:hover {
 /* Media queries específicos del index */
 @media only screen and (min-width: 576px) {
   .contenidoIndex .fotoIndex img {
-    height: 275px;
+    max-height: 275px;
   }
   .contenidoIndex .fotoIndex .tituloImagenIndex {
     font-size: 1.75rem;
@@ -262,7 +262,7 @@ header .menuSuperior a:hover {
 
 @media only screen and (min-width: 768px) {
   .contenidoIndex .fotoIndex img {
-    height: 350px;
+    max-height: 350px;
   }
   .contenidoIndex .fotoIndex .tituloImagenIndex {
     font-size: 2rem;

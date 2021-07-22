@@ -186,7 +186,7 @@ header {
 		position: relative;
 		img {
 			border-radius: 10px;
-			height: 225px;
+			max-height: 150px;
 			transform: scale(1);
 			transition: transform ease-in-out 300ms;
 		}
@@ -240,7 +240,7 @@ header {
 	.contenidoIndex {
 		.fotoIndex {
 			img {
-				height: 275px;
+				max-height: 275px;
 			}
 			.tituloImagenIndex {
 				font-size: 1.75rem;
@@ -258,7 +258,7 @@ header {
 	.contenidoIndex {
 		.fotoIndex {
 			img {
-				height: 350px;
+				max-height: 350px;
 			}
 			.tituloImagenIndex {
 				font-size: 2rem;
