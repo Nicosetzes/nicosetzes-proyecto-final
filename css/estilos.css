@@ -126,7 +126,7 @@ header .menuSuperior a:hover {
 
 .textoPrincipal {
   color: #000;
-  font-size: 1.125em;
+  font-size: 1.125rem;
   line-height: 2em;
   margin-bottom: 0.5rem;
 }
@@ -145,7 +145,7 @@ header .menuSuperior a:hover {
     font-size: 1.1em;
   }
   .textoPrincipal {
-    font-size: 1.125em;
+    font-size: 1.125rem;
   }
 }
 
@@ -157,26 +157,31 @@ header .menuSuperior a:hover {
     width: 35px;
   }
   .textoPrincipal {
-    font-size: 1.125em;
+    font-size: 1.125rem;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  audio {
+    min-width: 500px;
+  }
   header .menuSuperior {
     min-height: 7.5vh;
   }
   header .menuSuperior a {
     font-size: 1.5em;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: all ease-out 500ms;
+    transition: all ease-out 500ms;
   }
   header .menuSuperior a:hover {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
-    -webkit-transition: all 500ms;
-    transition: all 500ms;
     text-decoration: underline;
   }
   .textoPrincipal {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }
 
@@ -187,21 +192,43 @@ header .menuSuperior a:hover {
 }
 
 /* Estilos específicos de index.html */
-.contenidoIndex img {
-  height: 140px;
+.contenidoIndex .fotoIndex {
+  position: relative;
 }
 
-.contenidoIndex .fotoIndex:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-transition: -webkit-transform ease-in-out 200ms;
-  transition: -webkit-transform ease-in-out 200ms;
-  transition: transform ease-in-out 200ms;
-  transition: transform ease-in-out 200ms, -webkit-transform ease-in-out 200ms;
+.contenidoIndex .fotoIndex img {
+  border-radius: 10px;
+  height: 225px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform ease-in-out 300ms;
+  transition: -webkit-transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms;
+  transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
+}
+
+.contenidoIndex .fotoIndex .tituloImagenIndex {
+  color: #fff;
+  font-size: 1.25rem;
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.contenidoIndex .fotoIndex:hover img {
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
 }
 
 .contenidoIndex .carruselIndex {
   max-width: 350px;
+}
+
+.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel img {
+  border-radius: 10px;
 }
 
 #footerIndex {
@@ -222,8 +249,11 @@ header .menuSuperior a:hover {
 
 /* Media queries específicos del index */
 @media only screen and (min-width: 576px) {
-  .contenidoIndex img {
+  .contenidoIndex .fotoIndex img {
     height: 275px;
+  }
+  .contenidoIndex .fotoIndex .tituloImagenIndex {
+    font-size: 1.75rem;
   }
   .contenidoIndex .carruselIndex {
     max-width: 550px;
@@ -231,8 +261,11 @@ header .menuSuperior a:hover {
 }
 
 @media only screen and (min-width: 768px) {
-  .contenidoIndex img {
+  .contenidoIndex .fotoIndex img {
     height: 350px;
+  }
+  .contenidoIndex .fotoIndex .tituloImagenIndex {
+    font-size: 2rem;
   }
   .contenidoIndex .carruselIndex {
     max-width: 700px;
@@ -243,7 +276,7 @@ header .menuSuperior a:hover {
 }
 
 @media only screen and (min-width: 992px) {
-  .contenidoIndex img {
+  .contenidoIndex .fotoIndex img {
     max-height: 450px;
   }
   .contenidoIndex .carruselIndex {
@@ -255,7 +288,7 @@ header .menuSuperior a:hover {
 }
 
 @media only screen and (min-width: 1200px) {
-  .contenidoIndex .fotoIndex {
+  .contenidoIndex .fotoIndex img {
     max-height: 325px;
   }
   #portadaIndex {
@@ -286,7 +319,7 @@ header .menuSuperior a:hover {
 }
 
 .cuentoEscritoLg::after {
-  background-color: #148488;
+  background-color: #2fbabe;
   content: "";
   mix-blend-mode: multiply;
   position: absolute;
@@ -510,12 +543,13 @@ header .menuSuperior a:hover {
 }
 
 /* Estilos específicos de audiocuentos.html */
-#archivosAudiocuentos .titulo {
-  padding-top: 15px;
+#acordeonAudiocuentos .fondoButton {
+  background-color: #f3f2f2;
+  border-radius: 10px;
 }
 
-.bloqueAcordeon {
-  background-color: #e8e8e8;
+#acordeonAudiocuentos .fondoButton button span {
+  color: #fff;
 }
 
 #footerAudiocuentos {
@@ -559,6 +593,9 @@ header .menuSuperior a:hover {
 }
 
 @media only screen and (min-width: 1200px) {
+  #acordeonAudiocuentos .collapse section audio {
+    min-width: 500px;
+  }
   #portadaAudiocuentos {
     height: 35vh;
   }
@@ -574,6 +611,7 @@ header .menuSuperior a:hover {
 }
 
 #imagenSobreMi img {
+  border-radius: 10px;
   max-width: 300px;
   width: 60vw;
 }

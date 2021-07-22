@@ -90,7 +90,7 @@ header {
 
 .textoPrincipal {
 	color: #000;
-	font-size: 1.125em;
+	font-size: 1.125rem;
 	line-height: 2em;
 	margin-bottom: 0.5rem;
 }
@@ -113,7 +113,7 @@ header {
 	}
 
 	.textoPrincipal {
-		font-size: 1.125em;
+		font-size: 1.125rem;
         } 
 
 }
@@ -137,21 +137,26 @@ header {
 	}
 
 	.textoPrincipal {
-		font-size: 1.125em;
+		font-size: 1.125rem;
         }
 }
 
 
 @media only screen and (min-width: 992px) {
 
+	audio {
+		min-width: 500px;
+	}
+
 	header {
 		.menuSuperior {
 			min-height: 7.5vh;
 			a {
 				font-size: 1.5em;
+				transform: scale(1);
+				transition: all ease-out 500ms;
 				&:hover {
 					transform: scale(0.9);
-					transition: all 500ms;
 					text-decoration: underline;
 				}
 			}
@@ -159,7 +164,7 @@ header {
 	}
 
 	.textoPrincipal {
-		font-size: 1em;
+		font-size: 1rem;
         }
 }
 
@@ -177,20 +182,40 @@ header {
 /* Estilos específicos de index.html */
 
 .contenidoIndex {
-    img {
-        height: 140px;
-    }
 	.fotoIndex {
-		&:hover {
-			transform: scale(1.05);
-			transition: transform ease-in-out 200ms ;
+		position: relative;
+		img {
+			border-radius: 10px;
+			height: 225px;
+			transform: scale(1);
+			transition: transform ease-in-out 300ms;
+		}
+		.tituloImagenIndex {
+			color: #fff;
+			font-size: 1.25rem;
+			font-style: italic;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50% , -50%);
+		}
+		&:hover img {
+			transform: scale(1.025);
 			}
 	}
 	.carruselIndex {
 		max-width: 350px;
+		#carouselExampleIndicators {
+			.carousel-inner{
+				.tamañoCarrusel {
+					img {
+						border-radius: 10px;
+					}
+				}
+			}
+		}
 	}
 }
-
 
 #footerIndex {
 	border-top: #af1313 3px solid;
@@ -213,8 +238,13 @@ header {
 @media only screen and (min-width: 576px) {
 
 	.contenidoIndex {
-        img {
-            height: 275px;
+		.fotoIndex {
+			img {
+				height: 275px;
+			}
+			.tituloImagenIndex {
+				font-size: 1.75rem;
+			}
         }
 		.carruselIndex {
 			max-width: 550px;
@@ -226,8 +256,13 @@ header {
 @media only screen and (min-width: 768px) {
 
 	.contenidoIndex {
-        img {
-            height: 350px;
+		.fotoIndex {
+			img {
+				height: 350px;
+			}
+			.tituloImagenIndex {
+				font-size: 2rem;
+			}
         }
 		.carruselIndex {
 			max-width: 700px;
@@ -237,14 +272,15 @@ header {
 	#portadaIndex {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 992px) {
 
 	.contenidoIndex {
-        img {
-            max-height: 450px;
+		.fotoIndex {
+			img {
+				max-height: 450px;
+			}
         }
 		.carruselIndex {
 			max-width: 900px;
@@ -260,9 +296,10 @@ header {
 @media only screen and (min-width: 1200px) {
 
 	.contenidoIndex {
-
         .fotoIndex {
-            max-height: 325px;
+			img {
+				max-height: 325px;
+			}
         }
     }
 
@@ -295,13 +332,13 @@ header {
 }
 
 .cuentoEscritoLg::after {
-	background-color: #148488;
+	background-color: #2fbabe;
 	content: "";
 	mix-blend-mode: multiply;
 	position: absolute;
 	inset: 0;
 	z-index: -1;
-}
+	}
 
 .cuentoUnoImg {
 	background-image: url("../media/cuento01.jpg");
@@ -510,15 +547,17 @@ header {
 
 /* Estilos específicos de audiocuentos.html */
 
-#archivosAudiocuentos {
-    .titulo {
-        padding-top: 15px;
-    }
-}
-
-.bloqueAcordeon {
-	background-color: #e8e8e8;
-}
+#acordeonAudiocuentos {
+	.fondoButton {
+		background-color: rgb(243, 242, 242);
+		border-radius: 10px;
+		button {
+			span {
+				color: #fff;
+			}
+		}
+		}
+	}
 
 #footerAudiocuentos {
 	border-top: #d23200 3px solid;
@@ -569,6 +608,16 @@ header {
 
 @media only screen and (min-width: 1200px) {
 
+	#acordeonAudiocuentos {
+		.collapse {
+			section {
+				audio {
+					min-width: 500px;
+				}
+			}
+		}
+	}
+
 	#portadaAudiocuentos {
 		height: 35vh;
 	}
@@ -587,6 +636,7 @@ header {
 
 #imagenSobreMi {
     img {
+		border-radius: 10px;
         max-width: 300px;
         width: 60vw;
     }
