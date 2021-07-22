@@ -108,7 +108,7 @@ header {
 }
 
 header .menuSuperior a {
-  font-size: 1.4em;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
@@ -126,14 +126,14 @@ header .menuSuperior a:hover {
 
 .textoPrincipal {
   color: #000;
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 2em;
   margin-bottom: 0.5rem;
 }
 
 .tituloImportante {
   color: #000;
-  font-size: 1.25em;
+  font-size: 1.5rem;
   text-decoration: underline;
 }
 
@@ -142,22 +142,22 @@ header .menuSuperior a:hover {
     min-height: 5vh;
   }
   header .menuSuperior a {
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
   .textoPrincipal {
     font-size: 1.125rem;
+  }
+  .tituloImportante {
+    font-size: 1.25rem;
   }
 }
 
 @media only screen and (min-width: 768px) {
   header .menuSuperior a {
-    font-size: 1.25em;
+    font-size: 1.25rem;
   }
   footer .redesSociales img {
     width: 35px;
-  }
-  .textoPrincipal {
-    font-size: 1.125rem;
   }
 }
 
@@ -169,7 +169,7 @@ header .menuSuperior a:hover {
     min-height: 7.5vh;
   }
   header .menuSuperior a {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-transition: all ease-out 500ms;
@@ -183,11 +183,14 @@ header .menuSuperior a:hover {
   .textoPrincipal {
     font-size: 1rem;
   }
+  .tituloImportante {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   header .menuSuperior a {
-    font-size: 1.625em;
+    font-size: 1.625rem;
   }
 }
 
@@ -297,36 +300,6 @@ header .menuSuperior a:hover {
 }
 
 /* Estilos específicos de cuentos_escritos.html */
-.cuentoEscritoSm {
-  padding: 1rem;
-  height: 200px;
-}
-
-.cuentoEscritoSm span {
-  color: #fff;
-  font-size: 2em;
-}
-
-.cuentoEscritoLg {
-  padding: 1rem;
-  height: 200px;
-  position: relative;
-}
-
-.cuentoEscritoLg span {
-  color: #fff;
-  font-size: 2em;
-}
-
-.cuentoEscritoLg::after {
-  background-color: #2fbabe;
-  content: "";
-  mix-blend-mode: multiply;
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-
 .cuentoUnoImg {
   background-image: url("../media/cuento01.jpg");
   background-position: center;
@@ -400,12 +373,16 @@ header .menuSuperior a:hover {
 }
 
 .enlaceCuento {
-  isolation: isolate;
+  min-height: 15px;
 }
 
-.enlaceCuento:hover {
-  isolation: inherit;
-  text-decoration: none;
+.enlaceCuento .cuentoEscrito {
+  padding: 0.5rem;
+}
+
+.enlaceCuento .cuentoEscrito span {
+  color: #fff;
+  font-size: 1.125rem;
 }
 
 #footerCuentosEscritos {
@@ -524,19 +501,47 @@ header .menuSuperior a:hover {
 }
 
 /* Media queries específicos de cuentos_escritos */
+@media only screen and (min-width: 576px) {
+  .enlaceCuento {
+    min-height: 40px;
+  }
+  .enlaceCuento .cuentoEscrito {
+    padding: 1rem;
+  }
+  .enlaceCuento .cuentoEscrito span {
+    color: #fff;
+    font-size: 1.25rem;
+  }
+}
+
 @media only screen and (min-width: 768px) {
+  .enlaceCuento {
+    min-height: 100px;
+  }
+  .enlaceCuento .cuentoEscrito span {
+    font-size: 1.5rem;
+  }
   #portadaCuentosEscritos {
     height: 30vh;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  .enlaceCuento {
+    min-height: 125px;
+  }
+  .enlaceCuento .cuentoEscrito span {
+    font-size: 1.75rem;
+  }
   #portadaCuentosEscritos {
     height: 30vh;
   }
 }
 
 @media only screen and (min-width: 1200px) {
+  .enlaceCuento {
+    min-height: 175px;
+  }
   #portadaCuentosEscritos {
     height: 35vh;
   }
@@ -612,8 +617,7 @@ header .menuSuperior a:hover {
 
 #imagenSobreMi img {
   border-radius: 10px;
-  max-width: 300px;
-  width: 60vw;
+  max-width: 200px;
 }
 
 #portadaSobreMi {
@@ -625,22 +629,31 @@ header .menuSuperior a:hover {
 }
 
 /* Media queries específicos de sobre mí */
+@media only screen and (min-width: 576px) {
+  #imagenSobreMi img {
+    max-width: 250px;
+  }
+}
+
 @media only screen and (min-width: 768px) {
+  #imagenSobreMi img {
+    max-width: 300px;
+  }
   #portadaSobreMi {
     height: 30vh;
   }
 }
 
 @media only screen and (min-width: 992px) {
+  #imagenInfoPersonal img {
+    max-width: 350px;
+  }
   #portadaSobreMi {
     height: 30vh;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  #imagenInfoPersonal img {
-    max-width: 350px;
-  }
   #portadaSobreMi {
     height: 35vh;
   }

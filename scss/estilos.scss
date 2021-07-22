@@ -71,7 +71,7 @@ header {
 	background-color: #f4f4f2;
 	.menuSuperior {
 		a {
-			font-size: 1.4em;
+			font-size: 1.25rem;
 			text-decoration: none;
 			&:hover {
 				text-decoration: underline;
@@ -90,14 +90,14 @@ header {
 
 .textoPrincipal {
 	color: #000;
-	font-size: 1.125rem;
+	font-size: 1rem;
 	line-height: 2em;
 	margin-bottom: 0.5rem;
 }
 
 .tituloImportante {
 	color: $colorTitulo;
-	font-size: 1.25em;
+	font-size: 1.5rem;
 	text-decoration: underline;
 }
 
@@ -107,7 +107,7 @@ header {
 		.menuSuperior {
 			min-height: 5vh;
 			a {
-				font-size: 1.1em;
+				font-size: 1.1rem;
 			}
 		}
 	}
@@ -116,6 +116,10 @@ header {
 		font-size: 1.125rem;
         } 
 
+	.tituloImportante {
+		font-size: 1.25rem;
+		}
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -123,7 +127,7 @@ header {
 	header {
 		.menuSuperior {
 			a {
-				font-size: 1.25em;
+				font-size: 1.25rem;
 			}
 		}
 	}
@@ -135,10 +139,6 @@ header {
 			}
 		}
 	}
-
-	.textoPrincipal {
-		font-size: 1.125rem;
-        }
 }
 
 
@@ -152,7 +152,7 @@ header {
 		.menuSuperior {
 			min-height: 7.5vh;
 			a {
-				font-size: 1.5em;
+				font-size: 1.5rem;
 				transform: scale(1);
 				transition: all ease-out 500ms;
 				&:hover {
@@ -166,6 +166,10 @@ header {
 	.textoPrincipal {
 		font-size: 1rem;
         }
+	
+	.tituloImportante {
+		font-size: 1.5rem;
+		}
 }
 
 @media only screen and (min-width: 1200px) {
@@ -173,7 +177,7 @@ header {
 	header {
 		.menuSuperior {
 			a {
-				font-size: 1.625em;
+				font-size: 1.625rem;
 			}
 		}
 	}
@@ -311,35 +315,6 @@ header {
 
 /* Estilos específicos de cuentos_escritos.html */
 
-
-.cuentoEscritoSm {
-	padding: 1rem;
-	height: 200px;
-	span {
-		color: #fff;
-		font-size: 2em;
-	}
-}
-
-.cuentoEscritoLg {
-	padding: 1rem;
-	height: 200px;
-	position: relative;
-	span {
-		color: #fff;
-		font-size: 2em;
-	}
-}
-
-.cuentoEscritoLg::after {
-	background-color: #2fbabe;
-	content: "";
-	mix-blend-mode: multiply;
-	position: absolute;
-	inset: 0;
-	z-index: -1;
-	}
-
 .cuentoUnoImg {
 	background-image: url("../media/cuento01.jpg");
 	background-position: center;
@@ -413,10 +388,13 @@ header {
 }
 
 .enlaceCuento {
-	isolation: isolate;
-	&:hover {
-		isolation: inherit;
-		text-decoration: none;
+	min-height: 15px;
+	.cuentoEscrito {
+		padding: 0.5rem;
+		span {
+			color: #fff;
+			font-size: 1.125rem;
+		}
 	}
 }
 
@@ -518,10 +496,29 @@ header {
 
 
 @media only screen and (min-width: 576px) {
+	.enlaceCuento {
+		min-height: 40px;
+		.cuentoEscrito {
+			padding: 1rem;
+			span {
+				color: #fff;
+				font-size: 1.25rem;
+			}
+		}
+	}
 
 }
 
 @media only screen and (min-width: 768px) {
+
+	.enlaceCuento {
+		min-height: 100px;
+		.cuentoEscrito {
+			span {
+				font-size: 1.5rem;
+			}
+		}
+	}
 
 	#portadaCuentosEscritos {
 		height: 30vh;
@@ -531,6 +528,15 @@ header {
 
 @media only screen and (min-width: 992px) {
 
+	.enlaceCuento {
+		min-height: 125px;
+		.cuentoEscrito {
+			span {
+				font-size: 1.75rem;
+			}
+		}
+	}
+
 	#portadaCuentosEscritos {
 		height: 30vh;
 	}
@@ -538,6 +544,10 @@ header {
 }
 
 @media only screen and (min-width: 1200px) {
+
+	.enlaceCuento {
+		min-height: 175px;
+	}
 
 	#portadaCuentosEscritos {
 		height: 35vh;
@@ -637,8 +647,7 @@ header {
 #imagenSobreMi {
     img {
 		border-radius: 10px;
-        max-width: 300px;
-        width: 60vw;
+        max-width: 200px;
     }
 }
 
@@ -654,9 +663,21 @@ header {
 
 @media only screen and (min-width: 576px) {
 
+	#imagenSobreMi {
+		img {
+			max-width: 250px;
+		}
+	}
+
 }
 
 @media only screen and (min-width: 768px) {
+
+	#imagenSobreMi {
+		img {
+			max-width: 300px;
+		}
+	}
 
 	#portadaSobreMi {
 		height: 30vh;
@@ -666,6 +687,12 @@ header {
 
 @media only screen and (min-width: 992px) {
 
+	#imagenInfoPersonal {
+        img {
+            max-width: 350px;
+        }
+    }
+
 	#portadaSobreMi {
 		height: 30vh;
 	}
@@ -674,11 +701,6 @@ header {
 
 @media only screen and (min-width: 1200px) {
 
-	#imagenInfoPersonal {
-        img {
-            max-width: 350px;
-        }
-    }
 
 	#portadaSobreMi {
 		height: 35vh;

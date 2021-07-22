@@ -35,18 +35,18 @@
 				<a href="https://twitter.com/Nicosetzes" target="_blank"><img src="media/twitter.svg" alt="Twitter"></a>
 				<a href="https://www.linkedin.com/in/nicolás-setzes-237657208/" target="_blank"><img src="media/linkedin.svg" alt="Linked in"></a>
 			</div>
-			<form id="formulario" class="mx-auto py-4">
+			<form name="formularioSitio" id="formulario" method="POST" action="email.php" class="mx-auto py-4">
 				<div class="form-row padding-3">
 					<div class="col">
-						<input type="text" class="form-control" placeholder="Nombre/s">
+						<input name="inpNombre" type="text" class="form-control" placeholder="Nombre/s">
 					</div>
 					<div class="col">
-						<input type="text" class="form-control" placeholder="Apellido">
+						<input name="inpApellido" type="text" class="form-control" placeholder="Apellido">
 					</div>
 				</div>
 				<div class="form-row py-4">
 					<div class="col">
-						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
+						<input name="inpEmail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
 						<small id="emailHelp" class="form-text text-muted">Nunca compartiremos su dirección de e-mail con nadie</small>
 					</div>
 				</div>
@@ -64,7 +64,7 @@
 				<div class="form-row py-3">
 					<div class="col">
 						<label for="exampleFormControlTextarea1" class="textoPrincipal font-weight-regular">Detalle su consulta:</label>
-						<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+						<textarea name="inpConsulta" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 					</div>
 				</div>
 				<div class="form-row py-3">
@@ -73,17 +73,17 @@
 					</div>
 				</div>
 				<div class="form-check form-check-inline">
-					<input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+					<input name="inpCheck1" class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
 					<label class="form-check-label" for="inlineCheckbox1">E-mail</label>
 				</div>
 				<div class="form-check form-check-inline">
-					<input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+					<input name="inpCheck2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
 					<label class="form-check-label" for="inlineCheckbox2">Otra</label>
 				</div>
 				<div class="form-row py-3">
 					<div class="col">
 						<label for="exampleFormControlTextarea2" class="textoPrincipal font-weight-regular">Otra</label>
-						<textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+						<textarea name="inpOtra" class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
 					</div>
 				</div>
 				<div class="form-row py-3">
@@ -92,7 +92,7 @@
 					</div>
 					<div class="col-12">
 						<div class="form-check form-check-inline">
-							<input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option1">
+							<input name="inpCheck3" class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option1">
 						</div>
 					</div>
 				</div>
