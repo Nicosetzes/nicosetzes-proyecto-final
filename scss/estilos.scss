@@ -15,7 +15,7 @@ body {
 }
 
 .copyright {
-    p {
+    span {
         animation-delay: 0;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -114,11 +114,11 @@ header {
 
 	.textoPrincipal {
 		font-size: 1.125rem;
-        } 
+    } 
 
 	.tituloImportante {
 		font-size: 1.25rem;
-		}
+	}
 
 }
 
@@ -165,11 +165,11 @@ header {
 
 	.textoPrincipal {
 		font-size: 1rem;
-        }
+    }
 	
 	.tituloImportante {
 		font-size: 1.5rem;
-		}
+	}
 }
 
 @media only screen and (min-width: 1200px) {
@@ -205,7 +205,7 @@ header {
 		}
 		&:hover img {
 			transform: scale(1.025);
-			}
+		}
 	}
 	.carruselIndex {
 		max-width: 350px;
@@ -254,7 +254,6 @@ header {
 			max-width: 550px;
 		}
     }
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -272,7 +271,6 @@ header {
 			max-width: 700px;
 		}
     }
-
 	#portadaIndex {
 		height: 30vh;
 	}
@@ -290,11 +288,9 @@ header {
 			max-width: 900px;
 		}
     }
-
 	#portadaIndex {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -306,11 +302,9 @@ header {
 			}
         }
     }
-
 	#portadaIndex {
 		height: 35vh;
 	}
-
 }
 
 /* Estilos específicos de cuentos_escritos.html */
@@ -566,8 +560,8 @@ header {
 				color: #fff;
 			}
 		}
-		}
 	}
+}
 
 #footerAudiocuentos {
 	border-top: #d23200 3px solid;
@@ -594,10 +588,15 @@ header {
 
 @media only screen and (min-width: 576px) {
 
-	.titulo {
-		font-size: 1.125em;
-        }
-
+	#acordeonAudiocuentos {
+		.fondoButton {
+			button {
+				.titulo {
+					font-size: 1.125em;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -605,7 +604,6 @@ header {
 	#portadaAudiocuentos {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -613,7 +611,6 @@ header {
 	#portadaAudiocuentos {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -627,11 +624,9 @@ header {
 			}
 		}
 	}
-
 	#portadaAudiocuentos {
 		height: 35vh;
 	}
-
 }
 
 /* Estilos específicos de sobre_mi.html */
@@ -668,7 +663,6 @@ header {
 			max-width: 250px;
 		}
 	}
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -678,11 +672,9 @@ header {
 			max-width: 300px;
 		}
 	}
-
 	#portadaSobreMi {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -692,22 +684,17 @@ header {
             max-width: 350px;
         }
     }
-
 	#portadaSobreMi {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 1200px) {
 
-
 	#portadaSobreMi {
 		height: 35vh;
 	}
-
 }
-
 
 /* Estilos específicos de contacto.html */
 
@@ -739,17 +726,11 @@ header {
 
 /* Media queries específicos de contacto */
 
-
-@media only screen and (min-width: 576px) {
-
-}
-
 @media only screen and (min-width: 768px) {
 
 	#portadaContacto {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 992px) {

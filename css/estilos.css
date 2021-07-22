@@ -44,7 +44,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.copyright p {
+.copyright span {
   -webkit-animation-delay: 0;
           animation-delay: 0;
   -webkit-animation-duration: 2s;
@@ -580,7 +580,7 @@ header .menuSuperior a:hover {
 
 /* Media queries específicos de audiocuentos */
 @media only screen and (min-width: 576px) {
-  .titulo {
+  #acordeonAudiocuentos .fondoButton button .titulo {
     font-size: 1.125em;
   }
 }
