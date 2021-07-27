@@ -10,8 +10,13 @@ a {
 }
 
 body {
-	background-color: #e8e8e8;
+	background-color: #e0dddd;
 	font-family: $font-family;
+}
+
+.columnas {
+	column-count: 3;
+	column-width: 350px;
 }
 
 .copyright {
@@ -50,9 +55,9 @@ footer {
 			color: #000;
 			font-size: 1.1rem;
 			text-decoration: none;
-				svg {
-					text-decoration: none;
-				}
+			svg {
+				text-decoration: none;
+			}
 		}   
 	}
 }
@@ -119,7 +124,6 @@ header {
 	.tituloImportante {
 		font-size: 1.25rem;
 	}
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -215,7 +219,21 @@ header {
 					img {
 						border-radius: 10px;
 					}
+					.carousel-caption {
+						position: absolute;
+						left: 7.5%;
+						right: 7.5%;
+						h4,p {
+						color: #fff;
+						}
+					}
 				}
+			}
+		}
+		.carousel-zoom {
+			.carousel-item > img {
+				animation: zoom 40s forwards;
+				width: 100%;
 			}
 		}
 	}
@@ -252,6 +270,11 @@ header {
         }
 		.carruselIndex {
 			max-width: 550px;
+			.textoCarrusel {
+				font-size: 0.75rem;
+				line-height: 1.75em;
+				margin-bottom: 0.5rem;
+			}
 		}
     }
 }
@@ -269,6 +292,10 @@ header {
         }
 		.carruselIndex {
 			max-width: 700px;
+			.textoCarrusel {
+				font-size: 0.875rem;
+				line-height: 1.75em;
+			}
 		}
     }
 	#portadaIndex {
@@ -286,6 +313,10 @@ header {
         }
 		.carruselIndex {
 			max-width: 900px;
+			.textoCarrusel {
+				font-size: 1rem;
+				line-height: 2em;
+			}
 		}
     }
 	#portadaIndex {
@@ -383,10 +414,26 @@ header {
 
 .enlaceCuento {
 	min-height: 15px;
+	isolation: isolate;
+	color: #fff;
+	transition: color ease-in-out 400ms;
+	&:hover {
+		color:#c3ff1e;
+		text-decoration: none;
+		transition: color ease-in-out 400ms;
+	}
 	.cuentoEscrito {
 		padding: 0.5rem;
+		position: relative;
+		&::after {
+			content: "";
+			background-color: #dbdddb;
+			mix-blend-mode: multiply;
+			position: absolute;
+			inset: 0;
+			z-index: -1;
+		}
 		span {
-			color: #fff;
 			font-size: 1.125rem;
 		}
 	}
@@ -407,7 +454,6 @@ header {
 	background-size: cover;
 	height: 25vh;
 }
-
 
 .textoAside {
 	article {
@@ -440,13 +486,13 @@ header {
 				border-bottom: #fff 1px solid;
 				border-top: #fff 1px solid;
 				transform: scale(1,0);
-				transition: transform ease-out 200ms;
+				transition: transform ease-out 350ms;
 			}
 			&::after {
 				border-left: #fff 1px solid;
 				border-right: #fff 1px solid;
 				transform: scale(1,0);
-				transition: transform ease-out 200ms;
+				transition: transform ease-out 350ms;
 			}
 			&:hover::before {
 				transform: scale(1.1,1);
@@ -459,7 +505,7 @@ header {
 				display: block;
 				max-width: 100%;
 				opacity: 1;
-				transition: opacity ease-out 200ms;
+				transition: opacity ease-out 350ms;
 			}
 			.tarjetaTexto {
 				color: #fff;
@@ -468,7 +514,7 @@ header {
 				left: 50%;
 				top: 50%;
 				transform: translate(-50% , -50%);
-				transition: opacity ease-out 200ms;
+				transition: opacity ease-out 350ms;
 				width: 70%;
 				.textoPrincipal {
 					color: #fff;
@@ -488,19 +534,16 @@ header {
 
 /* Media queries específicos de cuentos_escritos */
 
-
 @media only screen and (min-width: 576px) {
 	.enlaceCuento {
 		min-height: 40px;
 		.cuentoEscrito {
 			padding: 1rem;
 			span {
-				color: #fff;
 				font-size: 1.25rem;
 			}
 		}
 	}
-
 }
 
 @media only screen and (min-width: 768px) {
@@ -517,7 +560,6 @@ header {
 	#portadaCuentosEscritos {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -546,7 +588,14 @@ header {
 	#portadaCuentosEscritos {
 		height: 40vh;
 	}
+}
 
+@media only screen and (min-width: 1700px) {
+
+	.enlaceCuento {
+		margin-bottom: 1em;
+		max-width: 550px;
+	}
 }
 
 /* Estilos específicos de audiocuentos.html */
@@ -738,7 +787,6 @@ header {
 	#portadaContacto {
 		height: 30vh;
 	}
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -746,5 +794,4 @@ header {
 	#portadaContacto {
 		height: 40vh;
 	}
-
 }

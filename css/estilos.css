@@ -34,14 +34,43 @@ font-weight-bold {
   }
 }
 
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.25, 1.25);
+            transform: scale(1.25, 1.25);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  to {
+    -webkit-transform: scale(1.25, 1.25);
+            transform: scale(1.25, 1.25);
+  }
+}
+
 /* Estilos generales */
 a {
   color: #000;
 }
 
 body {
-  background-color: #e8e8e8;
+  background-color: #e0dddd;
   font-family: "Montserrat", sans-serif;
+}
+
+.columnas {
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-width: 350px;
+          column-width: 350px;
 }
 
 .copyright span {
@@ -234,6 +263,22 @@ header .menuSuperior a:hover {
   border-radius: 10px;
 }
 
+.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption {
+  position: absolute;
+  left: 7.5%;
+  right: 7.5%;
+}
+
+.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption h4, .contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption p {
+  color: #fff;
+}
+
+.contenidoIndex .carruselIndex .carousel-zoom .carousel-item > img {
+  -webkit-animation: zoom 40s forwards;
+          animation: zoom 40s forwards;
+  width: 100%;
+}
+
 #footerIndex {
   border-top: #af1313 3px solid;
 }
@@ -261,6 +306,11 @@ header .menuSuperior a:hover {
   .contenidoIndex .carruselIndex {
     max-width: 550px;
   }
+  .contenidoIndex .carruselIndex .textoCarrusel {
+    font-size: 0.75rem;
+    line-height: 1.75em;
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -273,6 +323,10 @@ header .menuSuperior a:hover {
   .contenidoIndex .carruselIndex {
     max-width: 700px;
   }
+  .contenidoIndex .carruselIndex .textoCarrusel {
+    font-size: 0.875rem;
+    line-height: 1.75em;
+  }
   #portadaIndex {
     height: 30vh;
   }
@@ -284,6 +338,10 @@ header .menuSuperior a:hover {
   }
   .contenidoIndex .carruselIndex {
     max-width: 900px;
+  }
+  .contenidoIndex .carruselIndex .textoCarrusel {
+    font-size: 1rem;
+    line-height: 2em;
   }
   #portadaIndex {
     height: 30vh;
@@ -374,14 +432,34 @@ header .menuSuperior a:hover {
 
 .enlaceCuento {
   min-height: 15px;
+  isolation: isolate;
+  color: #fff;
+  -webkit-transition: color ease-in-out 400ms;
+  transition: color ease-in-out 400ms;
+}
+
+.enlaceCuento:hover {
+  color: #c3ff1e;
+  text-decoration: none;
+  -webkit-transition: color ease-in-out 400ms;
+  transition: color ease-in-out 400ms;
 }
 
 .enlaceCuento .cuentoEscrito {
   padding: 0.5rem;
+  position: relative;
+}
+
+.enlaceCuento .cuentoEscrito::after {
+  content: "";
+  background-color: #dbdddb;
+  mix-blend-mode: multiply;
+  position: absolute;
+  inset: 0;
+  z-index: -1;
 }
 
 .enlaceCuento .cuentoEscrito span {
-  color: #fff;
   font-size: 1.125rem;
 }
 
@@ -439,10 +517,10 @@ header .menuSuperior a:hover {
   border-top: #fff 1px solid;
   -webkit-transform: scale(1, 0);
           transform: scale(1, 0);
-  -webkit-transition: -webkit-transform ease-out 200ms;
-  transition: -webkit-transform ease-out 200ms;
-  transition: transform ease-out 200ms;
-  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+  -webkit-transition: -webkit-transform ease-out 350ms;
+  transition: -webkit-transform ease-out 350ms;
+  transition: transform ease-out 350ms;
+  transition: transform ease-out 350ms, -webkit-transform ease-out 350ms;
 }
 
 .textoAside aside .tarjeta::after {
@@ -450,10 +528,10 @@ header .menuSuperior a:hover {
   border-right: #fff 1px solid;
   -webkit-transform: scale(1, 0);
           transform: scale(1, 0);
-  -webkit-transition: -webkit-transform ease-out 200ms;
-  transition: -webkit-transform ease-out 200ms;
-  transition: transform ease-out 200ms;
-  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+  -webkit-transition: -webkit-transform ease-out 350ms;
+  transition: -webkit-transform ease-out 350ms;
+  transition: transform ease-out 350ms;
+  transition: transform ease-out 350ms, -webkit-transform ease-out 350ms;
 }
 
 .textoAside aside .tarjeta:hover::before {
@@ -470,8 +548,8 @@ header .menuSuperior a:hover {
   display: block;
   max-width: 100%;
   opacity: 1;
-  -webkit-transition: opacity ease-out 200ms;
-  transition: opacity ease-out 200ms;
+  -webkit-transition: opacity ease-out 350ms;
+  transition: opacity ease-out 350ms;
 }
 
 .textoAside aside .tarjeta .tarjetaTexto {
@@ -482,8 +560,8 @@ header .menuSuperior a:hover {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: opacity ease-out 200ms;
-  transition: opacity ease-out 200ms;
+  -webkit-transition: opacity ease-out 350ms;
+  transition: opacity ease-out 350ms;
   width: 70%;
 }
 
@@ -509,7 +587,6 @@ header .menuSuperior a:hover {
     padding: 1rem;
   }
   .enlaceCuento .cuentoEscrito span {
-    color: #fff;
     font-size: 1.25rem;
   }
 }
@@ -544,6 +621,13 @@ header .menuSuperior a:hover {
   }
   #portadaCuentosEscritos {
     height: 40vh;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .enlaceCuento {
+    margin-bottom: 1em;
+    max-width: 550px;
   }
 }
 
