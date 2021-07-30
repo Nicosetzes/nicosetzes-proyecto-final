@@ -61,6 +61,10 @@ a {
   color: #000;
 }
 
+audio {
+  max-width: 225px;
+}
+
 body {
   background-color: #e0dddd;
   font-family: "Montserrat", sans-serif;
@@ -167,6 +171,9 @@ header .menuSuperior a:hover {
 }
 
 @media only screen and (min-width: 576px) {
+  audio {
+    max-width: 500px;
+  }
   header .menuSuperior {
     min-height: 5vh;
   }
@@ -182,6 +189,9 @@ header .menuSuperior a:hover {
 }
 
 @media only screen and (min-width: 768px) {
+  audio {
+    width: 400px;
+  }
   header .menuSuperior a {
     font-size: 1.25rem;
   }
@@ -192,7 +202,7 @@ header .menuSuperior a:hover {
 
 @media only screen and (min-width: 992px) {
   audio {
-    min-width: 500px;
+    width: 500px;
   }
   header .menuSuperior {
     min-height: 7.5vh;
@@ -230,13 +240,13 @@ header .menuSuperior a:hover {
 
 .contenidoIndex .fotoIndex img {
   border-radius: 10px;
-  max-height: 150px;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition: -webkit-transform ease-in-out 300ms;
   transition: -webkit-transform ease-in-out 300ms;
   transition: transform ease-in-out 300ms;
   transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
+  width: 80%;
 }
 
 .contenidoIndex .fotoIndex .tituloImagenIndex {
@@ -250,13 +260,13 @@ header .menuSuperior a:hover {
           transform: translate(-50%, -50%);
 }
 
-.contenidoIndex .fotoIndex:hover img {
-  -webkit-transform: scale(1.025);
-          transform: scale(1.025);
-}
-
 .contenidoIndex .carruselIndex {
   max-width: 350px;
+}
+
+.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-indicators li {
+  height: 2px;
+  width: 20px;
 }
 
 .contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel img {
@@ -271,6 +281,10 @@ header .menuSuperior a:hover {
 
 .contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption h4, .contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption p {
   color: #fff;
+}
+
+.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption h4 {
+  font-size: 1.25em;
 }
 
 .contenidoIndex .carruselIndex .carousel-zoom .carousel-item > img {
@@ -292,13 +306,14 @@ header .menuSuperior a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh;
+  height: 20vh;
 }
 
 /* Media queries específicos del index */
 @media only screen and (min-width: 576px) {
   .contenidoIndex .fotoIndex img {
     max-height: 275px;
+    width: auto;
   }
   .contenidoIndex .fotoIndex .tituloImagenIndex {
     font-size: 1.75rem;
@@ -333,6 +348,20 @@ header .menuSuperior a:hover {
 }
 
 @media only screen and (min-width: 992px) {
+  .contenidoIndex .fotoIndex:hover img {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+  }
+  .contenidoIndex .fotoIndex:hover .tituloImagenIndex {
+    color: #c3ff1e;
+    text-decoration: none;
+    -webkit-transition: color ease-in-out 400ms;
+    transition: color ease-in-out 400ms;
+  }
+  .contenidoIndex .fotoIndex .tituloImagenIndex {
+    -webkit-transition: color ease-in-out 400ms;
+    transition: color ease-in-out 400ms;
+  }
   .contenidoIndex .fotoIndex img {
     max-height: 450px;
   }
@@ -434,29 +463,25 @@ header .menuSuperior a:hover {
   min-height: 15px;
   isolation: isolate;
   color: #fff;
-  -webkit-transition: color ease-in-out 400ms;
-  transition: color ease-in-out 400ms;
-}
-
-.enlaceCuento:hover {
-  color: #c3ff1e;
-  text-decoration: none;
-  -webkit-transition: color ease-in-out 400ms;
-  transition: color ease-in-out 400ms;
-}
-
-.enlaceCuento .cuentoEscrito {
-  padding: 0.5rem;
   position: relative;
 }
 
-.enlaceCuento .cuentoEscrito::after {
+.enlaceCuento:focus {
+  color: #c3ff1e;
+  text-decoration: none;
+}
+
+.enlaceCuento::after {
   content: "";
   background-color: #dbdddb;
   mix-blend-mode: multiply;
   position: absolute;
   inset: 0;
   z-index: -1;
+}
+
+.enlaceCuento .cuentoEscrito {
+  padding: 0.5rem;
 }
 
 .enlaceCuento .cuentoEscrito span {
@@ -476,7 +501,7 @@ header .menuSuperior a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh;
+  height: 20vh;
 }
 
 .textoAside article {
@@ -484,103 +509,28 @@ header .menuSuperior a:hover {
   padding-right: 0;
 }
 
-.textoAside aside {
-  margin: 0px auto;
-  max-width: 300px;
-}
-
-.textoAside aside .tarjeta {
-  background-color: gray;
-  margin: 1em;
-  position: relative;
-}
-
-.textoAside aside .tarjeta:hover .tarjetaImagen {
-  opacity: 0.3;
-}
-
-.textoAside aside .tarjeta:hover .tarjetaTexto {
-  opacity: 1;
-}
-
-.textoAside aside .tarjeta::before, .textoAside aside .tarjeta::after {
-  content: '';
-  position: absolute;
-  bottom: 1.125em;
-  left: 1.125em;
-  right: 1.125em;
-  top: 1.125em;
-}
-
-.textoAside aside .tarjeta::before {
-  border-bottom: #fff 1px solid;
-  border-top: #fff 1px solid;
-  -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
-  -webkit-transition: -webkit-transform ease-out 350ms;
-  transition: -webkit-transform ease-out 350ms;
-  transition: transform ease-out 350ms;
-  transition: transform ease-out 350ms, -webkit-transform ease-out 350ms;
-}
-
-.textoAside aside .tarjeta::after {
-  border-left: #fff 1px solid;
-  border-right: #fff 1px solid;
-  -webkit-transform: scale(1, 0);
-          transform: scale(1, 0);
-  -webkit-transition: -webkit-transform ease-out 350ms;
-  transition: -webkit-transform ease-out 350ms;
-  transition: transform ease-out 350ms;
-  transition: transform ease-out 350ms, -webkit-transform ease-out 350ms;
-}
-
-.textoAside aside .tarjeta:hover::before {
-  -webkit-transform: scale(1.1, 1);
-          transform: scale(1.1, 1);
-}
-
-.textoAside aside .tarjeta:hover::after {
-  -webkit-transform: scale(1, 1.1);
-          transform: scale(1, 1.1);
-}
-
-.textoAside aside .tarjeta .tarjetaImagen {
-  display: block;
-  max-width: 100%;
-  opacity: 1;
-  -webkit-transition: opacity ease-out 350ms;
-  transition: opacity ease-out 350ms;
-}
-
-.textoAside aside .tarjeta .tarjetaTexto {
-  color: #fff;
-  opacity: 0;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: opacity ease-out 350ms;
-  transition: opacity ease-out 350ms;
-  width: 70%;
-}
-
-.textoAside aside .tarjeta .tarjetaTexto .textoPrincipal {
-  color: #fff;
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 0.5rem;
-}
-
-.textoAside aside .tarjeta .tarjetaTexto .tituloImportante {
-  color: #fff;
-  font-size: 1.25em;
-  text-decoration: underline;
-}
-
 /* Media queries específicos de cuentos_escritos */
+@media only screen and (max-width: 575px) {
+  .enlaceCuento {
+    -webkit-box-shadow: 2.5px 0 10px 0px rgba(0, 0, 0, 0.4);
+            box-shadow: 2.5px 0 10px 0px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    min-height: 60px;
+  }
+  .enlaceCuento .cuentoEscrito {
+    padding: 1rem;
+  }
+  .enlaceCuento .cuentoEscrito span {
+    font-size: 1.125rem;
+  }
+}
+
 @media only screen and (min-width: 576px) {
   .enlaceCuento {
+    -webkit-box-shadow: 2.5px 2.5px 10px 0px rgba(0, 0, 0, 0.4);
+            box-shadow: 2.5px 2.5px 10px 0px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.5em;
+    max-width: 310px;
     min-height: 40px;
   }
   .enlaceCuento .cuentoEscrito {
@@ -593,10 +543,11 @@ header .menuSuperior a:hover {
 
 @media only screen and (min-width: 768px) {
   .enlaceCuento {
+    max-width: 250px;
     min-height: 100px;
   }
   .enlaceCuento .cuentoEscrito span {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   #portadaCuentosEscritos {
     height: 30vh;
@@ -605,7 +556,17 @@ header .menuSuperior a:hover {
 
 @media only screen and (min-width: 992px) {
   .enlaceCuento {
-    min-height: 125px;
+    margin-bottom: 1em;
+    max-width: 320px;
+    min-height: 140px;
+    -webkit-transition: color ease-in-out 400ms;
+    transition: color ease-in-out 400ms;
+  }
+  .enlaceCuento:hover {
+    color: #c3ff1e;
+    text-decoration: none;
+    -webkit-transition: color ease-in-out 400ms;
+    transition: color ease-in-out 400ms;
   }
   .enlaceCuento .cuentoEscrito span {
     font-size: 1.75rem;
@@ -617,16 +578,102 @@ header .menuSuperior a:hover {
 
 @media only screen and (min-width: 1200px) {
   .enlaceCuento {
+    max-width: 380px;
     min-height: 175px;
   }
   #portadaCuentosEscritos {
     height: 40vh;
   }
+  .textoAside aside {
+    max-width: 300px;
+  }
+  .textoAside aside .tarjeta {
+    background-color: gray;
+    margin: 1em;
+    position: relative;
+  }
+  .textoAside aside .tarjeta:hover .tarjetaImagen {
+    opacity: 0.3;
+  }
+  .textoAside aside .tarjeta:hover .tarjetaTexto {
+    opacity: 1;
+  }
+  .textoAside aside .tarjeta::before, .textoAside aside .tarjeta::after {
+    content: '';
+    position: absolute;
+    bottom: 1.125em;
+    left: 1.125em;
+    right: 1.125em;
+    top: 1.125em;
+  }
+  .textoAside aside .tarjeta::before {
+    border-bottom: #fff 1px solid;
+    border-top: #fff 1px solid;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transition: -webkit-transform ease-out 350ms;
+    transition: -webkit-transform ease-out 350ms;
+    transition: transform ease-out 350ms;
+    transition: transform ease-out 350ms, -webkit-transform ease-out 350ms;
+  }
+  .textoAside aside .tarjeta::after {
+    border-left: #fff 1px solid;
+    border-right: #fff 1px solid;
+    -webkit-transform: scale(1, 0);
+            transform: scale(1, 0);
+    -webkit-transition: -webkit-transform ease-out 350ms;
+    transition: -webkit-transform ease-out 350ms;
+    transition: transform ease-out 350ms;
+    transition: transform ease-out 350ms, -webkit-transform ease-out 350ms;
+  }
+  .textoAside aside .tarjeta:hover::before {
+    -webkit-transform: scale(1.1, 1);
+            transform: scale(1.1, 1);
+  }
+  .textoAside aside .tarjeta:hover::after {
+    -webkit-transform: scale(1, 1.1);
+            transform: scale(1, 1.1);
+  }
+  .textoAside aside .tarjeta .tarjetaImagen {
+    display: block;
+    max-width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity ease-out 350ms;
+    transition: opacity ease-out 350ms;
+  }
+  .textoAside aside .tarjeta .tarjetaTexto {
+    color: #fff;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: opacity ease-out 350ms;
+    transition: opacity ease-out 350ms;
+    width: 70%;
+  }
+  .textoAside aside .tarjeta .tarjetaTexto .textoPrincipal {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 0.5rem;
+  }
+  .textoAside aside .tarjeta .tarjetaTexto .tituloImportante {
+    color: #fff;
+    font-size: 1.25em;
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (min-width: 1450px) {
+  .enlaceCuento {
+    max-width: 450px;
+  }
 }
 
 @media only screen and (min-width: 1700px) {
   .enlaceCuento {
-    margin-bottom: 1em;
     max-width: 550px;
   }
 }
@@ -654,7 +701,7 @@ header .menuSuperior a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh;
+  height: 20vh;
 }
 
 .titulo {
@@ -709,7 +756,7 @@ header .menuSuperior a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh;
+  height: 20vh;
 }
 
 /* Media queries específicos de sobre mí */
@@ -761,7 +808,7 @@ header .menuSuperior a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 25vh;
+  height: 20vh;
 }
 
 /* Media queries específicos de contacto */
