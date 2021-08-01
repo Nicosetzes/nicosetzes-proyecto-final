@@ -23,17 +23,8 @@ body {
 	column-width: 350px;
 }
 
-.copyright {
-    span {
-        animation-delay: 0;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-name: aparecer;
-    }
-}
-
 .enlaceTexto {
-	color: #af1313;
+	color: $colorCrimson;
 	text-decoration: none;
 	font-style: italic;
 	&:hover {
@@ -94,19 +85,17 @@ header {
 }
 
 .paginaActual {
-	color: #af1313;
+	color: $colorCrimson;
 }
 
 .textoPrincipal {
-	color: #000;
 	font-size: 1rem;
 	line-height: 2em;
 	margin-bottom: 0.5rem;
 }
 
 .tituloImportante {
-	color: $colorTitulo;
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	text-decoration: underline;
 }
 
@@ -126,11 +115,11 @@ header {
 	}
 
 	.textoPrincipal {
-		font-size: 1.125rem;
+		font-size: 1.1rem;
     } 
 
 	.tituloImportante {
-		font-size: 1.25rem;
+		font-size: 1.375rem;
 	}
 }
 
@@ -156,7 +145,6 @@ header {
 		}
 	}
 }
-
 
 @media only screen and (min-width: 992px) {
 
@@ -258,11 +246,11 @@ header {
 }
 
 #footerIndex {
-	border-top: #af1313 3px solid;
+	border-top: $colorCrimson 3px solid;
 }
 
 #headerIndex {
-	border-bottom: #af1313 3px solid;
+	border-bottom: $colorCrimson 3px solid;
 }
 
 #portadaIndex {
@@ -330,7 +318,7 @@ header {
 				transform: scale(1.025);
 			}
 			&:hover .tituloImagenIndex {
-				color:#c3ff1e;
+				color: $colorLime;
 				text-decoration: none;
 				transition: color ease-in-out 400ms;
 			}
@@ -448,7 +436,7 @@ header {
 	color: #fff;
 	position: relative;
 	&:focus {
-		color:#c3ff1e;
+		color: $colorLime;
 		text-decoration: none;
 	}
 	&::after {
@@ -548,7 +536,7 @@ header {
 		min-height: 140px;
 		transition: color ease-in-out 400ms;
 		&:hover {
-			color:#c3ff1e;
+			color: $colorLime;
 			text-decoration: none;
 			transition: color ease-in-out 400ms;
 		}
@@ -816,6 +804,10 @@ header {
         a {
             img {
                 width: 30px;
+				&:hover {
+					transform: scale(1.1);
+					transition: all 75ms;
+				}
             }
         }
     }
@@ -823,6 +815,15 @@ header {
 
 #footerContacto {
 	border-top: #b084fd 3px solid;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: $colorCrimson;
+}
+
+#formulario {
+	max-width: 275px;
 }
 
 #headerContacto {
@@ -838,6 +839,13 @@ header {
 }
 
 /* Media queries específicos de contacto */
+
+@media only screen and (min-width: 576px) {
+
+	#formulario {
+		max-width: 425px;
+	}
+}
 
 @media only screen and (min-width: 768px) {
 

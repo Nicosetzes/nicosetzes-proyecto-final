@@ -25,9 +25,9 @@
 	<div id="contenedorContacto" class="container-fluid px-4">
 		<div class="row">
 			<div id="parrafosContacto" class="col-12 pt-4 text-center">
-				<h1 class="textoPrincipal font-weight-regular">Aquí podrás realizar una <span class="font-weight-bold">consulta</span> al autor y hacerle llegar tus <span class="font-weight-bold">comentarios</span>.</h1>
-				<p class="textoPrincipal font-weight-regular">Cualquier tipo de consulta es bienvenida, ya sea relacionada al sitio web, a la obra o al autor. <span class="font-weight-bold">¡No dudes en escribir!</span></p>
-				<p class="textoPrincipal font-weight-regular">Podés utilizar el <a class="enlaceTexto font-weight-bold" href="#formulario">formulario</a> que se muestra a continuación, o hacer uso de la comunicación a través de las <span class="font-weight-bold">redes sociales</span>.</p>
+				<h1 class="textoPrincipal font-weight-regular">Aquí podrán realizarme una <span class="font-weight-bold">consulta</span> y hacerme llegar sus <span class="font-weight-bold">comentarios</span>.</h1>
+				<p class="textoPrincipal font-weight-regular">Cualquier tipo de consulta es bienvenida, ya sea relacionada al sitio web, a mi obra o lo que gusten. <span class="font-weight-bold">¡No duden en escribir!</span></p>
+				<p class="textoPrincipal font-weight-regular">Pueden utilizar el <a class="enlaceTexto font-weight-bold" href="#formulario">formulario</a> que se muestra a continuación, o hacer uso de la comunicación a través de las <span class="font-weight-bold">redes sociales</span>.</p>
 			</div>
 			<div class="redesSociales col-12 text-center">
 				<a href="https://www.facebook.com/nicolas.setzes" target="_blank"><img src="media/facebook.svg" alt="Facebook"></a>
@@ -35,23 +35,23 @@
 				<a href="https://twitter.com/Nicosetzes" target="_blank"><img src="media/twitter.svg" alt="Twitter"></a>
 				<a href="https://www.linkedin.com/in/nicolás-setzes-237657208/" target="_blank"><img src="media/linkedin.svg" alt="Linked in"></a>
 			</div>
-			<form name="formularioSitio" id="formulario" method="POST" action="email.php" class="mx-auto py-4">
-				<div class="form-row padding-3">
-					<div class="col">
+			<form name="formularioSitio" id="formulario" method="POST" action="email.php" class="mx-auto py-3">
+				<div class="form-row py-2">
+					<div class="col-6">
 						<input name="inpNombre" type="text" class="form-control" placeholder="Nombre/s">
 					</div>
-					<div class="col">
+					<div class="col-6">
 						<input name="inpApellido" type="text" class="form-control" placeholder="Apellido">
 					</div>
 				</div>
-				<div class="form-row py-4">
-					<div class="col">
+				<div class="form-row py-2">
+					<div class="col-12">
 						<input name="inpEmail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="E-mail">
 						<small id="emailHelp" class="form-text text-muted">Nunca compartiremos su dirección de e-mail con nadie</small>
 					</div>
 				</div>
-				<div class="form-row py-3">
-					<div class="col">
+				<div class="form-row py-2">
+					<div class="col-12">
 						<label for="inputConsulta" class="textoPrincipal font-weight-regular">¿Qué tipo de consulta considera que es?</label>
 						<select id="inputConsulta" class="form-control">
 							<option selected>General</option>
@@ -61,14 +61,14 @@
 						</select>
 					</div>
 				</div>
-				<div class="form-row py-3">
-					<div class="col">
+				<div class="form-row py-2">
+					<div class="col-12">
 						<label for="exampleFormControlTextarea1" class="textoPrincipal font-weight-regular">Detalle su consulta:</label>
 						<textarea name="inpConsulta" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 					</div>
 				</div>
-				<div class="form-row py-3">
-					<div class="col">
+				<div class="form-row py-2">
+					<div class="col-12">
 						<label for="FormRowLabel2" class="textoPrincipal font-weight-regular">¿Por qué vía desea recibir la respuesta?</label>
 					</div>
 				</div>
@@ -80,13 +80,13 @@
 					<input name="inpCheck2" class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
 					<label class="form-check-label" for="inlineCheckbox2">Otra</label>
 				</div>
-				<div class="form-row py-3">
-					<div class="col">
+				<div class="form-row py-2">
+					<div class="col-12">
 						<label for="exampleFormControlTextarea2" class="textoPrincipal font-weight-regular">Otra</label>
 						<textarea name="inpOtra" class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
 					</div>
 				</div>
-				<div class="form-row py-3">
+				<div class="form-row py-2">
 					<div class="col-12">
 						<label for="FormRowLabel3" class="textoPrincipal font-weight-regular">¿Desea subscribirse al newsletter?</label>
 					</div>
@@ -96,10 +96,10 @@
 						</div>
 					</div>
 				</div>
-				<div class="form-row py-3">
-					<div class="col">
-						<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalEnviar">Enviar</button>
-						<button class="btn btn-primary" type="reset">Limpiar</button>
+				<div class="form-row py-2">
+					<div class="col-12">
+						<button class="btn btn-success" type="button" data-toggle="modal" data-target="#modalEnviar">Enviar</button>
+						<button class="btn btn-secondary" type="reset">Limpiar</button>
 						<div class="modal fade" id="modalEnviar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							<div class="modal-dialog">
 								<div class="modal-content">
@@ -114,7 +114,7 @@
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary" data-dismiss="modal">Volver</button>
-								  		<button type="button" class="btn btn-primary">Confirmar</button>
+								  		<button type="button" class="btn btn-success" disabled>Confirmar</button>
 									</div>
 								</div>
 							</div>
