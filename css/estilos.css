@@ -55,6 +55,10 @@ body {
 .columnas {
   -webkit-column-count: 3;
           column-count: 3;
+  -webkit-column-gap: 3em;
+          column-gap: 3em;
+  -webkit-column-rule: 1px solid #ccc;
+          column-rule: 1px solid #ccc;
   -webkit-column-width: 350px;
           column-width: 350px;
 }
@@ -97,6 +101,10 @@ footer .menuInferior a svg {
   text-decoration: none;
 }
 
+footer .menuInferior a:hover {
+  text-decoration: underline;
+}
+
 h1 {
   font-weight: 400;
   text-decoration: none;
@@ -137,6 +145,10 @@ header .menuSuperior a:hover {
 .tituloImportante {
   font-size: 1.25rem;
   text-decoration: underline;
+}
+
+textarea {
+  resize: none;
 }
 
 @media only screen and (min-width: 576px) {
@@ -233,26 +245,26 @@ header .menuSuperior a:hover {
   max-width: 350px;
 }
 
-.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-indicators li {
+.contenidoIndex .carruselIndex #carruselFrases .carousel-indicators li {
   height: 2px;
   width: 20px;
 }
 
-.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel img {
+.contenidoIndex .carruselIndex #carruselFrases .carousel-inner .tamañoCarrusel img {
   border-radius: 10px;
 }
 
-.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption {
+.contenidoIndex .carruselIndex #carruselFrases .carousel-inner .tamañoCarrusel .carousel-caption {
   position: absolute;
   left: 7.5%;
   right: 7.5%;
 }
 
-.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption h4, .contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption p {
+.contenidoIndex .carruselIndex #carruselFrases .carousel-inner .tamañoCarrusel .carousel-caption h4, .contenidoIndex .carruselIndex #carruselFrases .carousel-inner .tamañoCarrusel .carousel-caption p {
   color: #fff;
 }
 
-.contenidoIndex .carruselIndex #carouselExampleIndicators .carousel-inner .tamañoCarrusel .carousel-caption h4 {
+.contenidoIndex .carruselIndex #carruselFrases .carousel-inner .tamañoCarrusel .carousel-caption h4 {
   font-size: 1.25em;
 }
 
@@ -348,7 +360,7 @@ header .menuSuperior a:hover {
 
 @media only screen and (min-width: 1200px) {
   .contenidoIndex .fotoIndex img {
-    max-height: 325px;
+    max-height: 300px;
   }
   #portadaIndex {
     height: 40vh;

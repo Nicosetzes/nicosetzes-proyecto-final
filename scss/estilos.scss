@@ -20,6 +20,8 @@ body {
 
 .columnas {
 	column-count: 3;
+	column-gap: 3em;
+	column-rule: 1px solid #ccc;
 	column-width: 350px;
 }
 
@@ -52,6 +54,9 @@ footer {
 			text-decoration: none;
 			svg {
 				text-decoration: none;
+			}
+			&:hover {
+				text-decoration: underline;
 			}
 		}   
 	}
@@ -97,6 +102,10 @@ header {
 .tituloImportante {
 	font-size: 1.25rem;
 	text-decoration: underline;
+}
+
+textarea {
+	resize: none
 }
 
 @media only screen and (min-width: 576px) {
@@ -210,7 +219,7 @@ header {
 	}
 	.carruselIndex {
 		max-width: 350px;
-		#carouselExampleIndicators {
+		#carruselFrases {
 			.carousel-indicators {
 				li {
 					height: 2px;
@@ -347,7 +356,7 @@ header {
 	.contenidoIndex {
         .fotoIndex {
 			img {
-				max-height: 325px;
+				max-height: 300px;
 			}
         }
     }
