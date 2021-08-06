@@ -1,6 +1,7 @@
 @import "variables";
 @import "fuentes";
 @import "each";
+@import "mixins";
 @import "keyframes";
 
 /* Estilos generales */
@@ -123,10 +124,6 @@ textarea {
 		}
 	}
 
-	.textoPrincipal {
-		font-size: 1.1rem;
-    } 
-
 	.tituloImportante {
 		font-size: 1.375rem;
 	}
@@ -175,10 +172,6 @@ textarea {
 			}
 		}
 	}
-
-	.textoPrincipal {
-		font-size: 1rem;
-    }
 	
 	.tituloImportante {
 		font-size: 1.5rem;
@@ -263,11 +256,7 @@ textarea {
 }
 
 #portadaIndex {
-	background-image: url('../media/header01-1920.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 20vh;
+	@include portada(url('../media/header01-1920.jpg') , 20vh)
 }
 
 /* Media queries específicos del index */
@@ -368,75 +357,51 @@ textarea {
 /* Estilos específicos de cuentos_escritos.html */
 
 .cuentoUnoImg {
-	background-image: url("../media/cuento01-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento01-650.jpg"))
 }
 
 .cuentoDosImg {
-	background-image: url("../media/cuento02-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento02-650.jpg"))
 }
 
 .cuentoTresImg {
-	background-image: url("../media/cuento03-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento03-650.jpg"))
 }
 
 .cuentoCuatroImg {
-	background-image: url("../media/cuento04-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento04-650.jpg"))
 }
 
 .cuentoCincoImg {
-	background-image: url("../media/cuento05-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento05-650.jpg"))
 }
 
 .cuentoSeisImg {
-	background-image: url("../media/cuento06-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento06-650.jpg"))
 }
 
 .cuentoSieteImg {
-	background-image: url("../media/cuento07-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento07-650.jpg"))
 }
 
 .cuentoOchoImg {
-	background-image: url("../media/cuento08-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento08-650.jpg"))
 }
 
 .cuentoNueveImg {
-	background-image: url("../media/cuento09-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento09-650.jpg"))
 }
 
 .cuentoDiezImg {
-	background-image: url("../media/cuento10-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento10-650.jpg"))
 }
 
 .cuentoOnceImg {
-	background-image: url("../media/cuento11-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento11-650.jpg"))
 }
 
 .cuentoDoceImg {
-	background-image: url("../media/cuento12-650.jpg");
-	background-position: center;
-	background-size: cover;
+	@include cuento_escrito (url("../media/cuento12-650.jpg"))
 }
 
 .enlaceCuento {
@@ -473,18 +438,7 @@ textarea {
 }
 
 #portadaCuentosEscritos {
-	background-image: url('../media/header02-1920.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 20vh;
-}
-
-.textoAside {
-	article {
-		padding-left: 0;
-		padding-right: 0;
-	}
+	@include portada (url('../media/header02-1920.jpg') , 20vh)
 }
 
 /* Media queries específicos de cuentos_escritos */
@@ -681,12 +635,32 @@ textarea {
 	border-bottom: #d23200 3px solid;
 }
 
+.narradores {
+	article {
+		border-top: $colorBlue 2px solid;
+		padding: 1.5em 0;
+	}
+	.narradoresInicial {
+		&::before {
+			content: open-quote;
+			color: gray;
+			font-size: 3em;
+		}
+	}
+	.narradoresFinal {
+		&::after {
+			content: close-quote;
+			color: gray;
+			font-size: 3em;
+		}
+	}
+	.fotoNarradores {
+		border-radius: 20px;
+	}
+}
+
 #portadaAudiocuentos {
-	background-image: url('../media/header03-1920.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 20vh;
+	@include portada (url('../media/header03-1920.jpg') , 20vh)
 }
 
 .titulo {
@@ -734,6 +708,27 @@ textarea {
 			}
 		}
 	}
+
+	.narradores {
+		article {
+			border-top: none;
+			position: relative;
+			&::before {
+				content: '';
+				background-color: $colorBlue;
+				position: absolute;
+				left: 0;
+				top: 0;
+				height: 2px;
+				width: 0%;
+				transition: all ease-in-out 450ms;
+			}
+		}
+		&:hover article::before {
+			width: 100%;
+		}	
+	}
+
 	#portadaAudiocuentos {
 		height: 40vh;
 	}
@@ -757,11 +752,7 @@ textarea {
 }
 
 #portadaSobreMi {
-	background-image: url('../media/header04-1920.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 20vh;
+	@include portada (url('../media/header04-1920.jpg') , 20vh)
 }
 
 /* Media queries específicos de sobre mí */
@@ -840,11 +831,7 @@ textarea {
 }
 
 #portadaContacto {
-	background-image: url('../media/header05-1920.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 20vh;
+	@include portada (url('../media/header05-1920.jpg') , 20vh)
 }
 
 /* Media queries específicos de contacto */

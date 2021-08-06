@@ -1,0 +1,13 @@
+@mixin portada ($url , $height) {
+    background-image: $url;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: $height;
+}
+
+@mixin cuento_escrito ($url) {
+    background-image: $url;
+	background-position: center;
+	background-size: cover;
+}

@@ -161,9 +161,6 @@ textarea {
   header .menuSuperior a {
     font-size: 1.1rem;
   }
-  .textoPrincipal {
-    font-size: 1.1rem;
-  }
   .tituloImportante {
     font-size: 1.375rem;
   }
@@ -199,9 +196,6 @@ textarea {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
     text-decoration: underline;
-  }
-  .textoPrincipal {
-    font-size: 1rem;
   }
   .tituloImportante {
     font-size: 1.5rem;
@@ -485,11 +479,6 @@ textarea {
   height: 20vh;
 }
 
-.textoAside article {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 /* Media queries específicos de cuentos_escritos */
 @media only screen and (max-width: 575px) {
   .enlaceCuento {
@@ -677,6 +666,27 @@ textarea {
   border-bottom: #d23200 3px solid;
 }
 
+.narradores article {
+  border-top: #092a94 2px solid;
+  padding: 1.5em 0;
+}
+
+.narradores .narradoresInicial::before {
+  content: open-quote;
+  color: gray;
+  font-size: 3em;
+}
+
+.narradores .narradoresFinal::after {
+  content: close-quote;
+  color: gray;
+  font-size: 3em;
+}
+
+.narradores .fotoNarradores {
+  border-radius: 20px;
+}
+
 #portadaAudiocuentos {
   background-image: url("../media/header03-1920.jpg");
   background-position: center;
@@ -712,6 +722,24 @@ textarea {
 @media only screen and (min-width: 1200px) {
   #acordeonAudiocuentos .collapse section audio {
     min-width: 500px;
+  }
+  .narradores article {
+    border-top: none;
+    position: relative;
+  }
+  .narradores article::before {
+    content: '';
+    background-color: #092a94;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 0%;
+    -webkit-transition: all ease-in-out 450ms;
+    transition: all ease-in-out 450ms;
+  }
+  .narradores:hover article::before {
+    width: 100%;
   }
   #portadaAudiocuentos {
     height: 40vh;
