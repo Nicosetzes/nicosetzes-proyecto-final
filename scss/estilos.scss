@@ -53,9 +53,6 @@ footer {
 			color: #000;
 			font-size: 1.1rem;
 			text-decoration: none;
-			svg {
-				text-decoration: none;
-			}
 			&:hover {
 				text-decoration: underline;
 			}
@@ -673,12 +670,8 @@ textarea {
 @media only screen and (min-width: 576px) {
 
 	#acordeonAudiocuentos {
-		.fondoButton {
-			button {
-				.titulo {
-					font-size: 1.125em;
-				}
-			}
+		.titulo {
+			font-size: 1.125em;
 		}
 	}
 }
@@ -700,12 +693,8 @@ textarea {
 @media only screen and (min-width: 1200px) {
 
 	#acordeonAudiocuentos {
-		.collapse {
-			section {
-				audio {
-					min-width: 500px;
-				}
-			}
+		audio {
+			min-width: 500px;
 		}
 	}
 

@@ -97,10 +97,6 @@ footer .menuInferior a {
   text-decoration: none;
 }
 
-footer .menuInferior a svg {
-  text-decoration: none;
-}
-
 footer .menuInferior a:hover {
   text-decoration: underline;
 }
@@ -702,7 +698,7 @@ textarea {
 
 /* Media queries específicos de audiocuentos */
 @media only screen and (min-width: 576px) {
-  #acordeonAudiocuentos .fondoButton button .titulo {
+  #acordeonAudiocuentos .titulo {
     font-size: 1.125em;
   }
 }
@@ -720,7 +716,7 @@ textarea {
 }
 
 @media only screen and (min-width: 1200px) {
-  #acordeonAudiocuentos .collapse section audio {
+  #acordeonAudiocuentos audio {
     min-width: 500px;
   }
   .narradores article {
