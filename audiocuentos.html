@@ -8,6 +8,7 @@
 	<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+	<script src="js/main.js" defer></script>
 	<link rel="icon" href="media/book.svg">
 
 	<title>Audiocuentos</title>
@@ -35,10 +36,15 @@
 					</div>
 					<div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#acordeonAudiocuentos">
 						<section class="d-flex flex-column align-items-center px-2 py-3">
-							<audio controls>
+							<audio id="audioUno" class="audioFile">
 								<source src="media/sin_embalar.mp3" type="audio/mpeg">
 								<p>Lo sentimos, algo ha fallado</p>
 							</audio>
+							<div class="audioBotones">
+								<button id="reproducirUno">Iniciar</button>
+								<button id="pausarUno">Pausar</button>
+								<button id="detenerUno">Detener</button>
+							</div>
 							<article class="columnas pt-3 text-left">
 								<p class="textoPrincipal font-weight-regular">Te reconozco que nunca te vi como un ser de fundamentos, una persona que se sentara a contar ladrillos y estudiar la geometría que resulta, esto implica que podía maravillarte con un esfuerzo más bien mínimo, pero certero. Existen técnicas de todo tipo, más aun si la intención es solo impresionar al prójimo, a la compañía. Era la mejor manera de empezar mí día, contemplando el afecto que venía de tu admiración. El ritual era sagrado e inamovible: aun puedo sentir el olor a café –y de mi ya clásico té de limón–, las pantuflas y las cortinas corridas –por si pintaba–.</p>
 								<p class="textoPrincipal font-weight-regular">Comenzaba en ocasiones con mi mano izquierda, indicándole que configure una forma sencilla, pero conmovedora. La música no dejaba lugar para nada más. Ahora empiezo con la derecha, pues sobre gustos no hay nada escrito, ya sabés. La transferencia emocional es un proceso complejo, un duelo absoluto, y reescribir un nombre en la historia forma parte del mismo.</p>
@@ -54,10 +60,15 @@
 					</div>
 					<div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#acordeonAudiocuentos">
 						<section class="d-flex flex-column align-items-center px-2 py-3">
-							<audio controls>
+							<audio id="audioDos" class="audioFile">
 								<source src="media/de_paso.mp3" type="audio/mpeg">
 									<p>Lo sentimos, algo ha fallado</p>
 							</audio>
+							<div class="audioBotones">
+								<button id="reproducirDos">Iniciar</button>
+								<button id="pausarDos">Pausar</button>
+								<button id="detenerDos">Detener</button>
+							</div>
 							<article class="columnas pt-3 text-left">
 								<p class="textoPrincipal font-weight-regular">—Papi, tengo hambre.</p>
 								<p class="textoPrincipal font-weight-regular">Mamá sabe que le pido a papá porque a ella no le gusta darme después del almuerzo.</p>
@@ -80,10 +91,15 @@
 					</div>
 					<div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#acordeonAudiocuentos">
 						<section class="d-flex flex-column align-items-center px-2 py-3">
-							<audio controls>
+							<audio id="audioTres" class="audioFile">
 								<source src="media/nodos.mp3" type="audio/mpeg">
 									<p>Lo sentimos, algo ha fallado</p>
 							</audio>
+							<div class="audioBotones">
+								<button id="reproducirTres">Iniciar</button>
+								<button id="pausarTres">Pausar</button>
+								<button id="detenerTres">Detener</button>
+							</div>
 							<article class="columnas pt-3 text-left">
 								<p class="textoPrincipal font-weight-regular">Los sueños son una poderosa herramienta a la hora de estudiar distintas <span class="italic">configuraciones</span> de la realidad. A modo de ilustrar con el ejemplo, puedo contarles que ciertas imágenes me visitaron durante la noche anterior, aunque no permanecieron separadas durante mucho tiempo. Se observaron detenidamente, unos instantes, como midiéndose. Ahora, ¿quién sueña con imágenes distantes, inconexas? Debido a ello, quizás, no tardaron en unirse y dar lugar a una secuencia, a una nueva <span class="italic">configuración</span> de la realidad. Como en este relato, les adelanto, era yo el único protagonista. </p>
 								<p class="textoPrincipal font-weight-regular">La película me mostró un paralelismo interesante, una alternativa concreta a la respuesta que había ya formulado en mi persona. Ahora, ¿era completamente necesario? En ocasiones, no me queda más que maldecir a este destino que parece decidido a arruinarme. Me observo en el espejo y no reconozco del todo a ese ente que me devuelve la mirada. Lo más llamativo es la falta de color, como si el sueño hubiese llegado con una paleta de blancos, una que absorbió la energía del ser del espejo y lo introdujo a un estado endeble, caótico, vulnerable. Observo el interior de la cabaña con animosidad y la encuentro: la maleta ya está hecha, me espera. ¿Y ahora? </p>
@@ -108,10 +124,15 @@
 					</div>
 					<div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#acordeonAudiocuentos">
 						<section class="d-flex flex-column align-items-center px-2 py-3">
-							<audio controls>
+							<audio id="audioCuatro" class="audioFile">
 								<source src="media/la_viola.mp3" type="audio/mpeg">
 								<p>Lo sentimos, algo ha fallado</p>
 							</audio>
+							<div class="audioBotones">
+								<button id="reproducirCuatro">Iniciar</button>
+								<button id="pausarCuatro">Pausar</button>
+								<button id="detenerCuatro">Detener</button>
+							</div>
 							<article class="columnas pt-3 text-left">
 								<p class="textoPrincipal font-weight-regular">Unas notas, en compás. Talento inusitado, como de cuna. Día comienza mas afuera un ocaso brillante. Necesita cambio. Se obliga salir y comenzar pues el oficio no permite. Avanza, avanza, retrocede. La viola. Lo considera una señal de que será distinto. La llegada es como si nunca. Señal. Toca en mismo compás y aclaman, miradas vuelan y audiencia delira. Sin duda es uno con la viola, domina la maestría de ser con ella. Su amor. Se espera en revistas y diarios como el gran músico que demostró. Denota que le pesa la presión de aparentar. Cambio.</p>
 								<p class="textoPrincipal font-weight-regular">Retorna con gloria, aunque no tanto. Los pensamientos se le arremolinan como cuando un tornado. Es un viaje largo, tal cual travesía. Siente poder degollar con mirada asesina. Siente culpable por lluvia ácida. A kilómetros, luz interrumpe. Se le viene ballena más grande y atardecer rojo. Recuerda las señales. Plantas próximas a la ruta intentan escape por aullido atroz. La maldita noche lo quiere atrapar, a su ser ha descubierto. Auto abandonado, ahora parsimonia al caminar por la banquina y descubrir silueta esbelta, tímida, sóla. Pregunta dirección con cuidado, confía y se va. La experiencia le ayuda, sabe cómo es. Avanza, avanza, retrocede y la viola, la viola, la viola. La luna sin intención revela detalles como si crítico musical estuviera. Se pregunta si, se contesta no. Entusiasmado corre, pues se sabe más vivo que nunca. El personaje cayó, la persona no.</p>
